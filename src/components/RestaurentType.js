@@ -1,12 +1,16 @@
 const RestaurantType = (props) => {
   const { resData } = props;
+  // console.log(key);
   return (
-    <div className="res-container">
-      <div className="res1">
-        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"></img>
-        <div className="rest-name">{resData.id}</div>
-        <div className="food-name">{resData.name}</div>
-        <div className="food-name">{resData.rating} star</div>
+    <div className="flex">
+      <div className="w-[250px] p-4 m-4 bg-gray-100 rounded-lg">
+        <img className = "w-[250px] rounded-lg" src= {resData.img}></img>
+        {/* <div className="rest-name">{resData.id}</div> */}
+        
+        <div className="text-2xl font-bold mb-4">{resData.name}</div>
+        <div className="food-name">{resData.price}$</div>
+        <div className="food-name">{resData.rate} star</div>
+        <div className="food-name">{resData.country} </div>
       </div>
     </div>
   );
